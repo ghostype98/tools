@@ -19,7 +19,7 @@ def get_jsname(jsfile, jspath):
 def main():
     #遍历json
     for f in os.listdir(js_path):
-        dir_na = f.split('.')[0]
+        dir_na = f.split('.')[0].split('_')[1]
         juedui_pt = os.path.join(out_path, dir_na)
         if not os.path.exists(juedui_pt):
              os.mkdir(os.path.join(out_path, dir_na))
